@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+}
+nav{
+    background-color:#0c4ca3;
+    padding:10px; /*khoảng cách bên trong*/
+}
+ul{
+    display: flex; /*sắp xếp các phần tử con theo hàng ngang*/
+    list-style:none; /*xóa dấu chấm đầu dòng*/
+    justify-content: center; /*căn giữa các phần tử con*/
+    gap:20px; /*khoảng cách giữa các phần tử con*/
+}
+li{
+    padding: 15px;
+}
+.border{
+    border-right: 1px solid grey;
+}
+.danhmuc-lienket{
+    color:white;
+    text-decoration: none; /*xóa gạch chân*/
+    font-family: Roboto, Arial, Tahoma;
+}
+.banner-qc{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+.qc{
+    display: flex;
+    justify-content: space-between;
+}
+header{
+    border-bottom: 10px solid #f1f1f2;
+}
+.demuc{
+    color:#0c4ca3;
+    font-family: Roboto, Arial, Tahoma;
+}
+.tintuc1{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+.tintuc{
+    display: flex;
+    justify-content: space-between;
+}
