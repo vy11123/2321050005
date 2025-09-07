@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family: Roboto, Arial, Tahoma;
 }
 nav{
     background-color:#0c4ca3;
@@ -7,9 +8,9 @@ nav{
 }
 ul{
     display: flex; /*sắp xếp các phần tử con theo hàng ngang*/
-    list-style:none; /*xóa dấu chấm đầu dòng*/
     justify-content: center; /*căn giữa các phần tử con*/
     gap:20px; /*khoảng cách giữa các phần tử con*/
+    list-style-type: square; 
 }
 li{
     padding: 15px;
@@ -34,16 +35,55 @@ li{
 header{
     border-bottom: 10px solid #f1f1f2;
 }
+.modau{
+    display: flex;
+    justify-content: space-between;
+}
+.tintuc{
+    justify-content: center; 
+}
 .demuc{
     color:#0c4ca3;
     font-family: Roboto, Arial, Tahoma;
+    padding-bottom: 10px; /*khoảng cách cái chữ với cái kẻ*/
+    border-bottom: 4px solid #0c4ca3; /*set màu độ rộng với kiểu nét*/
+    display: inline-block; /*để border ngắn bằng chữ*/
+    margin: 0%;
 }
-.tintuc1{
+.phude{
+    text-align: right;
+    padding-bottom: 1px;
+}
+.phude a{
+    text-decoration: none;
+    color:rgb(131, 130, 130);
+}
+.gach{
+    border-bottom: 1px solid gray;
+}
+.new{
+    display: flex;
+}
+.ndtintuc{
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+}
+.tintuc1 img{
+    width: 100%;
+    height: auto;
+
+}
+.anhqc2{
     display: flex;
     justify-content: center;
     margin: 10px 0px;
+    border: 1px;
 }
-.tintuc{
+.thongbao{
+    background-color: rgb(231, 230, 230);
+}
+.ket{
     display: flex;
     justify-content: space-between;
 }
