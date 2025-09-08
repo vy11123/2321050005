@@ -1,0 +1,14 @@
+body{
+    font-style: Spotify Sans;
+    background-color: black;
+}
+.lienket{
+    color: white;
+    text-decoration: none;
+}
+.dautrang1{
+    float: left;
+}
+.dautrang2{
+    justify-content: space-between;
+}
