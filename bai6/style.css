@@ -1,14 +1,124 @@
 body{
-    font-style: Spotify Sans;
+    font-style: Arial;
     background-color: black;
+    color: #ffffff;
 }
+
 .lienket{
     color: white;
     text-decoration: none;
 }
+
 .dautrang1{
     float: left;
 }
 .dautrang2{
-    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.daytrang2 input::placeholder{
+    color: white;
+}
+/*THÂN*/
+.noidung{
+    display: flex;
+    gap: 20px;
+}
+.trai .giua .phai{
+    background-color: #181818;
+    padding-top: 10px; /*khoảng đệm bên trong cột*/
+    border-radius: 6px;
+}
+.trai{
+    flex: 1;
+    gap: 20px;
+    overflow: scroll;
+    height: 700px;
+}
+.dautrang{
+    
+}
+
+.the_t{
+    display: flex;
+}
+.trong_the_t{
+    display: flex;
+    gap: 10px;
+}
+/*
+.trong_the_t1{
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: #282828;
+}
+.trong_the_t button a{
+    text-decoration: none;
+    color: white;
+}*/
+.list_t{
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.song_t{
+    display:flex;
+    align-items: center;
+    text-align: left;
+    margin-left: 20px;
+    word-wrap: break-word;
+}
+.song_t img{
+    width: 70px;
+    height: 70px;
+}
+
+/*GIỮA*/
+.giua{
+    flex: 3;
+    overflow: scroll;
+    height: 700px;
+}
+.the_g{
+    float: left;
+}
+.h1_g{
+    display: flex;
+    gap:30px
+}
+.s1_g1{
+    display: flex;
+    margin: 0;
+    background-color: #373737;
+    gap: 10px;
+    margin-top: 20px;
+    text-align: left;
+    
+}
+.s1_g1 img{
+    width: 50px;
+    height: auto;
+}
+.song2_g{
+    display:flex;
+    gap: 20px;
+}
+.song2_g img{
+    width: 150px;
+    height: auto;
+}
+.song3_g{
+    display:flex;
+    gap: 20px;
+}
+.song3_g img{
+    width: 150px;
+    height: auto;
+}
+
+/*PHẢI*/
+.phai{
+    flex: 1
+    overflow: scroll;
+    height: 700px;
 }
