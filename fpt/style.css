@@ -1,0 +1,184 @@
+body {
+    background-color: #141414;
+    margin: 0;
+    color: white;
+    font-family: Helvetica;
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    /*height: 10vh;*/
+    /*ghim đầu trang*/
+    position: fixed; 
+    z-index: 100;
+}
+
+.dautrang {
+    width: 75%;
+    margin: auto;
+    display:flex;
+    justify-content: space-between;
+}
+
+.dt {
+    display: flex;
+    list-style: none;
+    /* gap: 20px; */
+    padding: 5px;
+    margin: 0;
+    align-items: center;
+}
+
+.dt li {
+    margin-right: 20px;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.chucnang {
+    align-items: center;
+    margin-left: 50px;
+    display: flex;
+}
+
+main {
+    width: 75%;
+    background-color: #141414;
+    height: 1000px;
+    margin: auto;
+    height: auto;
+}
+
+.banner img{
+    width: 100%;
+    margin-top: 10vh;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+.troi {
+    width: 100%;
+    height: 650px;
+    background-image: url("img/bongden"), url("img/muado.jpeg"); /*lấy ảnh làm nền*/
+    background-size: cover, cover; /*cho ảnh phủ hết khung*/
+    background-position: center; /*vị trí của ảnh nền trên phần tử nhỏ*/
+    background-repeat: no-repeat, no-repeat; /*ko lặp lại ảnh*/
+    position: relative;
+    border-radius: 7px;
+}
+.xemngay {
+    position: absolute; /*ghim ảnh để khi khi chỉnh chữ ảnh ko trôi*/
+    top: 40px;
+    right: 40px;
+    align-items: center;
+    gap: 10px;
+    padding-left: 60px;
+    left: 0;
+    bottom: 0%;
+    top: 75%;
+    /* border:white 1px solid; */
+}
+.nut span{
+    margin-right: 10px;
+}
+.nut_xem {
+    background-color: #ff6500;
+    border-radius: 5px;
+    padding: 15px 33px;
+}
+.nut_icon {
+    background-color: #4a4a4a80;
+    border-radius: 100px;
+    padding: 12px;
+    font-size: 20px;
+}
+
+.qc img{
+    margin-top: 40px;
+    width: 100%;
+    border-radius: 10px;
+}
+.qc {
+    margin-bottom: 5px;
+}
+.phim {
+    margin-bottom: 50px;
+}
+.demuc_phim {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+}
+.list_phim img{
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+}
+.list_phim {
+    overflow-x: scroll;
+    display: flex;
+    
+}
+.kc_phim {
+    margin-right: 10px;
+}
+
+footer {
+    width: 100%;
+    background-color: #141414;
+}
+.chan {
+    width: 75%;
+    margin: auto;
+}
+.chan1 img{
+    width: 110px;
+    height: auto;
+}
+.chan1 {
+    display: flex;
+    border-top: 1px solid gray;
+    color: #dadada;
+    justify-content:space-between;
+    margin-right: 50px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.chan1 ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+.chan1 p {
+    font-size: 14px;
+}
+.chan1 a {
+    color: #dadada;
+    font-size: 14px;
+}   
+.chan1 i {
+    font-size: 20px;
+}
+.chan2 {
+    border-top: 1px solid gray;
+    display: flex;
+    justify-content:space-between;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.chan2 p {
+    font-size: 12px;
+    color: #c7c7c7;
+}
+.chan2 i {
+    font-size: 23px;
+    color: #c7c7c7;
+    margin: 8px;
+}
+
