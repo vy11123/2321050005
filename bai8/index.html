@@ -7,14 +7,15 @@
 </head>
 <body>
     <script>
+        //BÀI CŨ
         let thongTinDonHang = { //1 object
             maDonHang: "ma1",
             thongTinKhachHang: {
                 hoTen: "Nguyễn Kiều Vy",
-                sdt: "0936218700", //string
+                sdt: "0936218700", //chuỗi
                 trangThaiThanhVien: true, //boolean
             },
-            danhSachSP: {
+            dsSP: {
                 caPhe: {
                     maSP: "sp1",
                     tenSP: "Cà Phê",
@@ -37,6 +38,70 @@
             trangThaiGiaoHang: true,
             diaChiGiaoHang: "Số 35, ngõ 70/79, Hà Nội",
         }
+        document.writeln("Tổng giá trị đơn hàng là: " +(
+            (thongTinDonHang.dsSP.caPhe.soLuong * thongTinDonHang.dsSP.caPhe.giaTien)
+            + (thongTinDonHang.dsSP.matcha.soLuong * thongTinDonHang.dsSP.matcha.giaTien)
+            + (thongTinDonHang.dsSP.traSua.soLuong * thongTinDonHang.dsSP.traSua.giaTien) +"<br>"
+        ));
+
+
+
+        //STRING phương thức
+        let hoTen = "NGuyễn Kiều Vy";
+        //length: đo độ dài của chuỗi
+        document.writeln(hoTen.length);
+        document.writeln("<br>");
+
+        let myString = "Hello chào";
+        //cắt chuỗi
+        document.writeln(myString[4]); //chuỗi[index]
+        document.writeln(myString.slice(1,4)); //slice(vị trí bắt đầu, vị trí kết thúc +1)
+        //thay thế chuỗi
+        document.writeln("<br>");
+        document.writeln(myString.replace("Hello", "Hi")); //replace("chuỗi ban đầu", "chuỗi mới")
+        //note: nếu ko có chuỗi cần thay thế thì sẽ thêm chuỗi mới vào đầu chuỗi
+        document.writeln("<br>");
+        //viết hoa, viết thường
+        document.writeln(myString.toLowerCase());
+        document.writeln(myString.toUpperCase());
+        document.writeln("<br>");
+        //ktra tồn tại của ký tự trong chuỗi
+        document.writeln(myString.indexOf("e")); //ktra vị trí: nếu có trả ra vị trí, nếu ko có trả ra -1
+        document.writeln(myString.includes("e")); //chỉ ktra có hoặc không
+        document.writeln("<br>");
+        //tách chuỗi thành mảng split
+        document.writeln(myString.split(''));
+        document.writeln(myString.split(' '));
+        document.writeln(myString.split('e')); //thay kí tự trong '' bằng dấu ,
+        document.writeln("<br>");
+        //kiểm tra kí tự đó có bắt đầu chuỗi không
+        document.writeln(myString.startsWith('H'));
+        document.writeln(myString.startsWith('e')); //có sẽ in ra true, ko có sẽ in ra flase
+        document.writeln("<br>");
+
+
+        //Number
+        //định dạng số vs số thập phân nhất định
+        let pi = 3.14159;
+        document.writeln(pi.toFixed(2)); // lấy mấy số sau dấu ,
+        document.writeln("<br>");
+
+        //is not a number
+        document.writeln(isNaN(10));
+        document.writeln("<br>");
+
+        //tạo ra ngày giờ hiện tại
+        let toDay = new Date(); // Date('yyyy-mm-dd') sẽ tạo ra ngày giờ chỉ định
+        document.writeln(toDay);
+        document.writeln("<br>");
+        //lấy ra đối tượng cụ thể 
+        document.writeln(toDay.getMonth()); //lấy ra tháng, tháng bắt đầu từ số 0
+        document.writeln(toDay.getDate()); // lấy ra ngày
+            //getFullYear: lấy ra năm
+            //getDay: lấy ra thứ, chủ nhật là 0, t2 là 1,...
+            //getMinutes: lấy phút
+            //getHour: lấy ra giờ
+            //getSeconds: lấy ra giây
     </script>
 </body>
 </html>
