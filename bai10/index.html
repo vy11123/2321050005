@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 10</title>
+</head>
+<body>
+    <script>
+        let d = new Date();
+        let theDay = d.getDay();
+        switch (theDay) {
+            case 5:
+                document.writeln('Finally Friday');
+                break; //nếu ko có sẽ chạy liên tục đến các case tiếp theo
+            case 6:
+                document.writeln('Super Saturday');
+                break;
+            case 0:
+                document.writeln('Sleepy Sunday');
+                break;
+            default:
+                document.writeln("I'm looking forward to this weekend!");
+        }
+    </script>
+</body>
+</html>
