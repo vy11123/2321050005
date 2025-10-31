@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập: tính chỉ số BMI</title>
+    <style>
+        main{
+            
+        }
+        .container{
+            display:flex;
+            justify-content: center;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="cot1">
+                <div>
+                    <p>Cân nặng: Kg</p>
+                    <input type="number" id="canNang">
+                </div>
+                <div>
+                    <p>Chiều cao: m</p>
+                    <input type="number" id="chieuCao">
+                </div>
+                <div>
+                    <button onclick="bmi()">Tính chỉ số BMI</button>
+                </div>
+                <div>
+                    BMI:
+                    <input type="number" id="bmi">
+                </div>
+            </div>
+            <div class="cot2">
+                <img class="anh" width="65px"src="anh/binhthuong.jpg">
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        function bmi(){
+            let canNang = parseFloat(document.getElementById('canNang').value);
+            let chieuCao = parseFloat(document.getElementById('chieuCao').value);
+            let ketQua = 0;
+            let canhBao = "";
+            if(!canNang){
+                canhBao+="Vui lòng nhập cân nặng";
+            }
+            if(!chieuCao){
+                canhBao+=" Vui lòng nhập chiều cao";
+            }
+
+            if(canhBao){
+                alert(canhBao);
+            }
+            let bmi = canNang/(chieuCao*chieuCao);
+            document.getElementById('bmi').value = bmi;
+            if(bmi<18.5){
+                document.getElementsByClassName('anh')[0].src = 'anh/thieucan.jpg';   
+            }
+            else if(bmi>=18.5 && bmi<=24.9){
+                document.getElementsByClassName('anh')[0].src = 'anh/binhthuong.jpg';   
+            }
+            else if(bmi>24.9 && bmi<=29.9){
+                document.getElementsByClassName('anh')[0].src = 'anh/thuacan.jpg';   
+            }
+            else if(bmi>29.9 && bmi<=39.9){
+                document.getElementsByClassName('anh')[0].src = 'anh/beophi12.jpg';   
+            }
+            else{
+                document.getElementsByClassName('anh')[0].src = 'anh/beophinang.jpg';
+            }
+        }
+    </script>
+</body>
+</html>
