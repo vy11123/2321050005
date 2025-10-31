@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 8</title>
+    <title>Bài 8 (3)</title>
 </head>
 <body>
     <script>
@@ -23,7 +23,7 @@
         document.writeln(arr.length);
         document.writeln("<br>");
 
-        //lấy ra phần tưtrong mảng
+        //lấy ra phần tử trong mảng
         document.writeln(arr[2]); //arr[index]
         document.writeln("<br>");
 
@@ -31,7 +31,7 @@
         document.writeln(arr.indexOf(3));
         document.writeln("<br>");
 
-        //lastIndexOf: ktra vị trí xuất hiện của phần tử
+        //lastIndexOf: ktra vị trí xuất hiện cuối cùng của phần tử
         document.writeln(arr.lastIndexOf(3));
         document.writeln("<br>");
 
@@ -47,6 +47,75 @@
         c = [42, 'JS'];
         d = a.concat(b, c);
         document.writeln(d);
+        document.writeln("<br>");
+
+        d.pop(); //pop: xóa đi phần tử cuối cùng trong mảng
+        d.push('Vy'); //push: thêm phần tử vào cuối mảng
+        d.shift(); //shift: xóa phần tử ở đầu mảng
+        d.unshift('V'); //unshift: thêm phần tử vào đầu mảng
+        document.writeln(d);
+        document.writeln("<br>");
+        
+        //biến mảng thành 1 chuỗi, cách nhau bởi phần tử trong ngoặc ''
+        d = d.join('-'); 
+        document.writeln(d);
+        document.writeln("<br>");
+
+        //câu lệnh điều kiện
+        let so = "10000000000000000000000000001";
+        let soCuoi = parseInt(so[so.length -1]); //lấy số cuối của chuỗi trên sau đó chuyển về dạng số
+        if(soCuoi%2==0){
+            document.writeln("Đây là số chẵn!");
+        }
+        else{
+            document.writeln("Đây là số lẻ!");
+        }
+        document.writeln("<br>");
+
+        let now = new Date().getHours;
+        debugger
+        if(now>=5 && now<10){ //&& là và || là hoặc
+            document.writeln("Chào buổi sáng!");
+        }
+        else if(now>=10 && now<13){
+            document.writeln("Chào buổi trưa!");
+        }
+        else if(now>=13 && now<17){
+            document.writeln("Chào buổi chiều!");
+        }
+        else if(now>=17 && now<22){
+            document.writeln("Chào buổi tối!");
+        }
+        else{
+            document.writeln("Chào buổi đêm!");
+        }
+        document.writeln("<br>");
+
+        //Nhập vào điểm a,b,c (0-10) tính tổng điểm
+        let diemA = 6;
+        let diemB = 5;
+        let diemC = 10;
+        let tong = diemA*0.6 + diemB*0.3 + diemC*0.1;
+        if(diemA<=10 && diemA>=0 && diemB<=10 && diemB>=0 && diemC<=10 && diemC>=0){
+            if(tong>=8 && tong<=10){
+                document.writeln("Bạn đạt "+tong+" đó là điểm A");
+            }
+            else if(tong>=7 && tong<8){
+                document.writeln("Bạn đạt "+tong+" đó là điểm B");
+            }
+            else if(tong>=5 && tong<7){
+                document.writeln("Bạn đạt "+tong+" đó là điểm C");
+            }
+            else if(tong>=4 && tong<5){
+                document.writeln("Bạn đạt "+tong+" đó là điểm D");
+            }
+            else{
+                document.writeln("Bạn đạt "+tong+" đó là điểm F");
+            }
+        }
+        else{
+            document.writeln("Có điểm không nằm trong khoảng (0-10)");
+        }
     </script>
 </body>
 </html>

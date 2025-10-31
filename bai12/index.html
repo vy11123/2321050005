@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 12 (6)</title>
+    <style>
+        .container{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Ví dụ về thay đổi chế độ</h1>
+        </div>
+        <div>
+            <img width="300px" class="anh" src="anh/mattroi.jpg">
+        </div>
+        <div>
+            <h1>Chế độ sáng</h1>
+        </div>
+        <div>
+            <button onclick="doiCheDo()">Thay đổi chế độ</button>
+        </div>
+    </div>
+    <script>
+        function doiCheDo(){
+            document.getElementsByTagName('body')[0].style = 'background-color:black';
+            document.getElementsByTagName('h1')[0].style = 'color:yellow';
+            document.getElementsByTagName('h1')[1].style = 'color:white';
+            document.getElementsByClassName('anh')[0].src = 'anh/mattrang.jpg';
+        }
+    </script>
+</body>
+</html>

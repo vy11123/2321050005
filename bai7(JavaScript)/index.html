@@ -58,14 +58,47 @@
         //khai báo biến không giá trị ban đầu thì là undefined
 
         document.writeln("<br>");
-        
+
         let thongTinSinhVien = {
             hoTen: "Nguyễn Kiều Vy",
-            tuoi: 19,
+            tuoi: 20,
             gioiTinh: false,
             lop: "Hệ Thống Thông Tin K68", 
         }
-        document.writeln("Xin chào bạn "+thongTinSinhVien.hoTen+" lớp "+thongTinSinhVien.lop);
+        let diaChi = {
+            thanhPho: "Hà Nội",
+            quanHuyen: "Bắc Từ Liêm",
+            ngo: "70/79",
+            soNha: "35",
+        }
+        thongTinSinhVien.diaChi = diaChi; //tương đương với phần trong chú thích bên dưới 
+        // let thongTinSinhVien = {
+        //     hoTen: "Nguyễn Kiều Vy",
+        //     tuoi: 20,
+        //     gioiTinh: false,
+        //     lop: "Hệ Thống Thông Tin K68", 
+        //     diaChi: {
+        //         thanhPho: "Hà Nội",
+        //         quanHuyen: "Bắc Từ Liêm",
+        //         ngo: "70/79",
+        //         soNha: "35",
+        //     }
+        // }
+        let namNay = 2025;
+        document.writeln("Xin chào bạn "+thongTinSinhVien.hoTen
+            +" lớp "+thongTinSinhVien.lop
+            +" nhà ở "+thongTinSinhVien.diaChi.thanhPho
+            +" năm sinh "+(namNay-thongTinSinhVien.tuoi+"<br>")
+        );
+
+        
+        let soThu1 = "10";
+        soThu1 = parseInt(soThu1); //nếu không có soThu1 = thì vẫn là kiểu string -> phải gán giá trị
+        document.writeln(typeof(soThu1));
+        let soThu2 = "10.5";
+        soThu2 = parseFloat(soThu2);
+        document.writeln(soThu2);
+        //một chuỗi cộng 1 số thì tự động chuyển thành chuỗi
     </script>
 </body>
 </html>

@@ -3,12 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 11</title>
+    <title>Bài 11 (5)</title>
 </head>
 <body>
+    <h1>Tính toán:</h1>
+    <div>
+        Nhập số thứ nhất:
+        <input type="number" id="soThuNhat">
+    </div>
+    <div>
+        Nhập số thứ hai:
+        <input type="number" id="soThuHai">
+    </div>
+    <div>
+        <button onclick="tinhToan('cong')">Tính tổng</button>
+        <button onclick="tinhToan('tru')">Tính hiệu</button>
+        <button onclick="tinhToan('nhan')">Tính tích</button>
+        <button onclick="tinhToan('chia')">Tính thương</button>
+    </div>
+    <div>
+        Kết quả: <input type="number" id="ketQua" class="ket_qua">
+    </div>
+
     <script>
-        let hoTen = prompt('Nhập họ và tên: ')
-        document.writeln(hoTen)
+        
+        function tinhToan(phepTinh){
+            let soThuNhat = parseFloat(document.getElementById('soThuNhat').value);
+            let soThuHai = parseFloat(document.getElementById('soThuHai').value);
+            let ketQua = 0;
+            let canhBao = "";
+            if(!soThuNhat){
+                canhBao+="Vui lòng nhập số thứ nhất";
+            }
+            if(!soThuHai){
+                canhBao+=" Vui lòng nhập số thứ hai";
+            }
+
+            if(canhBao){
+                alert(canhBao);
+            }
+            if (phepTinh == 'cong'){
+                ketQua = soThuNhat + soThuHai;
+            }
+            else if (phepTinh == 'tru'){
+                ketQua = soThuNhat - soThuHai;
+            }
+            else if (phepTinh == 'nhan'){
+                ketQua = soThuNhat * soThuHai;
+            }
+            else{
+                ketQua = soThuNhat / soThuHai;
+            }
+            document.getElementById('ketQua').value = ketQua;
+        }
+        
+
+        //BÀI CŨ
+        // let hoTen = prompt('Nhập họ và tên: ');
+        // document.writeln(hoTen);
+        // document.writeln('<br>');
+
+        // function hello(){
+        //     document.writeln('Hello');
+        // }
+        // hello();
+        // document.writeln('<br>');
+
+        // let so = prompt('Nhập vào một số: ', "vd:10");
+        // so = parseInt(so);
+        // //có !<biến> thì các giá trị 0, emty, undefine,... thì vào điều kiện đấy hết
+        // if (!so){ 
+        //     document.writeln('Cảnh báo: không có số!');
+        // }
+        // else{
+        //     for(let i=1; i<=so; i++){
+        //         document.writeln('hello');
+        //     }
+        // }
     </script>
 </body>
 </html>
