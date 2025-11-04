@@ -41,81 +41,94 @@
         <a href="#" class="banner"><img src="img/banner.jpg"></a>
         <div class="troi">
             <div class="xemngay">
-                <p>2025 • T1 • 124 phút • Việt Nam</p>
+                <!-- <p>2025 • T1 • 124 phút • Việt Nam</p> -->
+                <div class="chutrenanh">
+                    <ul>
+                        <li style="list-style: none" class="nam">2025</li>
+                        <li class="tuoi">T16</li>
+                        <li class="thoiLuong">124 phút</li>
+                        <li cláss="quocGia">Việt Nam</li>
+                    </ul>
+                </div>
                 <br>
                 <div class="nut">
-                    <span class="nut_xem">
+                    <button class="nut_xem">
                         <i class="fa fa-caret-right" aria-hidden="true"></i>
                         Xem ngay
-                    </span>
-                    <span class="nut_icon"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
-                    <span class="nut_icon"><i class="fa fa-share" aria-hidden="true"></i></span>
+                    </button>
+                    <button class="nut_icon"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                    <button class="nut_icon"><i class="fa fa-share" aria-hidden="true"></i></button>
+                    <button class="nut_trailer">Trailer</button>
                 </div>
             </div>
         </div>
         <a href="#" class="qc"><img src="img/qc.jpg"></a>
         <div class="phim">
-            <div class="demuc_phim">
+            <div class="demuc_phim" >
                 <h2>Cày phim mỗi ngày</h2>
                 <a href="#" style="margin-right: 10px;">Xem thêm</a>
             </div>
             <div class="list_phim">
-                <a href="#" class="kc_phim">
-                    <img src="img/phim/chuatehuyenbi.webp">
-                    <p>Chúa Tể Huyền Bí</p>
-                </a>
-                <a href="#" class="kc_phim">
-                    <img src="img/phim/minion.jpg">
+                <div class="kc_phim">
+                    <img src="img/350x495-muado.jpg" onclick="chonPhim(1)">
+                    <p>Mưa Đỏ</p>
+                </div>
+                <div class="kc_phim">
+                    <img src="img/phim/minion.jpg" onclick="chonPhim(2)">
                     <p>Minion</p>
-                </a>
-                <a href="#" class="kc_phim">
-                    <img src="img/phim/nemo.jpg">
+                </div>
+                <div class="kc_phim">
+                    <img src="img/phim/nemo.jpg" onclick="chonPhim(3)">
                     <p>Nemo</p>
-                </a>
-                <a href="#" class="kc_phim">
-                    <img src="img/phim/bongdungtrungso.jpg">
+                </div>
+                <div class="kc_phim">
+                    <img src="img/phim/chuatehuyenbi.webp" onclick="chonPhim(4)">
+                    <p>Chúa Tể Huyền Bí</p>
+                </div>
+                <div class="kc_phim">
+                    <img src="img/phim/bongdungtrungso.jpg" onclick="chonPhim(5)">
                     <p>Bỗng Dưng Trúng Số</p>
-                </a>
-                <a href="#" class="kc_phim">
-                    <img src="img/phim/cam.jpg">
+                </div>
+                <div class="kc_phim">
+                    <img src="img/phim/cam.jpg" onclick="chonPhim(6)">
                     <p>Cám</p>
-                </a>
-                <a href="#" class="kc_phim">
+                </div>
+                <div class="kc_phim">
                     <img src="img/phim/cogiaoemlaso1.jpg">
                     <p>Cô Giáo Em Là Số 1</p>
-                </a>
-                <a href="#" class="kc_phim">
+                </div>
+                <div class="kc_phim">
                     <img src="img/phim/beautyandthebeaets.jpg">
                     <p>Beauty And The Beaets</p>
-                </a>
-                <a href="#" class="kc_phim">
+                </div>
+                <div class="kc_phim">
                     <img src="img/phim/conan.jpg">
                     <p>Conan</p>
-                </a>
-                <a href="#" class="kc_phim">
+                </div>
+                <div class="kc_phim">
                     <img src="img/phim/deptraithaysaisai.jpg">
                     <p>Đẹp Trai Thấy Sai Sai</p>
-                </a>
-                <a href="#" class="kc_phim">
+                </div>
+                <div class="kc_phim">
                     <img src="img/phim/kungfupanda.jpg">
                     <p>Kung Fu Panda</p>
-                </a>
-                <a href="#" class="kc_phim">
+                </div>
+                <div class="kc_phim">
                     <img src="img/phim/johnwick.jpg">
                     <p>John Wick</p>
-                </a>
-                <a href="#" class="kc_phim">
+                </div>
+                <div class="kc_phim">
                     <img src="img/phim/keanhon.jpg">
                     <p>Kẻ Ăn Hồn</p>
-                </a>
-                <a href="#" class="kc_phim">
+                </div>
+                <div class="kc_phim">
                     <img src="img/phim/mai.jpg">
                     <p>Mai</p>
-                </a>
-                <a href="#" class="kc_phim">
+                </div>
+                <div class="kc_phim">
                     <img src="img/phim/matbiec.jpg">
                     <p>Mắt Biếc</p>
-                </a>
+                </div>
             </div>
         </div>
         <div class="phim">
@@ -566,6 +579,7 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

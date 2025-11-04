@@ -71,6 +71,10 @@ main {
     position: relative;
     border-radius: 7px;
 }
+.chutrenanh ul{
+    display: flex; /*sắp xếp các phần tử con theo hàng ngang*/
+    gap:25px;
+}
 .xemngay {
     position: absolute; /*ghim ảnh để khi khi chỉnh chữ ảnh ko trôi*/
     top: 40px;
@@ -83,19 +87,27 @@ main {
     top: 75%;
     /* border:white 1px solid; */
 }
-.nut span{
+.nut button{
     margin-right: 10px;
+    color: white;
 }
 .nut_xem {
     background-color: #ff6500;
     border-radius: 5px;
     padding: 15px 33px;
+    font-size:15px;
 }
 .nut_icon {
     background-color: #4a4a4a80;
     border-radius: 100px;
     padding: 12px;
     font-size: 20px;
+}
+.nut_trailer {
+    background-color: #ff6500;
+    border-radius: 5px;
+    padding: 15px 33px;
+    font-size:15px;
 }
 
 .qc img{

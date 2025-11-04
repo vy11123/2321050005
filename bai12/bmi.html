@@ -5,38 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài tập: tính chỉ số BMI</title>
     <style>
-        main{
-            
+        body{
+            background-color:#c2d39f;
+        }
+        input{
+            border-radius: 3px;
+        }
+        h1{
+            text-align: center;
+            color:#3f5040;
         }
         .container{
             display:flex;
-            justify-content: center;
-            background-color: antiquewhite;
+            background-color: #a5ba88;
+            padding:30px;
+            gap:20px;
+            border-radius: 10px;
+            margin:auto;
+            width:100%;
+            max-width: 500px;
+            box-sizing: border-box;
+            border:black solid 1px;
+        }
+        .cot1{
+            display: flex;
+            flex-direction: column;
+            gap:5px;
+            margin:auto;
+        }
+        .cot2{
+            margin:auto;
+        }
+        img{
+            border: white solid 3px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <main>
+        <h1>Tính chỉ số BMI</h1>
         <div class="container">
             <div class="cot1">
                 <div>
-                    <p>Cân nặng: Kg</p>
+                    Cân nặng: 
                     <input type="number" id="canNang">
+                    Kg
                 </div>
+                <br>
                 <div>
-                    <p>Chiều cao: m</p>
+                    Chiều cao:
                     <input type="number" id="chieuCao">
+                    m
                 </div>
+                <br>
                 <div>
                     <button onclick="bmi()">Tính chỉ số BMI</button>
                 </div>
+                <br>
                 <div>
                     BMI:
                     <input type="number" id="bmi">
                 </div>
             </div>
             <div class="cot2">
-                <img class="anh" width="65px"src="anh/binhthuong.jpg">
+                <img class="anh" width="100px" src="anh/binhthuong.jpg">
             </div>
         </div>
     </main>
@@ -53,26 +86,43 @@
             if(!chieuCao){
                 canhBao+=" Vui lòng nhập chiều cao";
             }
-
             if(canhBao){
                 alert(canhBao);
+            }
+            if(canNang<0 || ChieuCao<0){
+                canhBao+="Có số âm!"
             }
             let bmi = canNang/(chieuCao*chieuCao);
             document.getElementById('bmi').value = bmi;
             if(bmi<18.5){
-                document.getElementsByClassName('anh')[0].src = 'anh/thieucan.jpg';   
+                document.getElementsByClassName('anh')[0].src = 'anh/thieucan.jpg'; 
+                document.getElementsByTagName('body')[0].style = 'background-color:#b3d5f2';
+                document.getElementsByTagName('div')[0].style = 'background-color:#79acd9'; 
+                document.getElementsByTagName('h1')[0].style = 'color:#023e8c';   
             }
             else if(bmi>=18.5 && bmi<=24.9){
-                document.getElementsByClassName('anh')[0].src = 'anh/binhthuong.jpg';   
+                document.getElementsByClassName('anh')[0].src = 'anh/binhthuong.jpg';  
+                document.getElementsByTagName('body')[0].style = 'background-color:#c2d39f'; 
+                document.getElementsByTagName('div')[0].style = 'background-color:#a5ba88'; 
+                document.getElementsByTagName('h1')[0].style = 'color:#3f5040';  
             }
             else if(bmi>24.9 && bmi<=29.9){
-                document.getElementsByClassName('anh')[0].src = 'anh/thuacan.jpg';   
+                document.getElementsByClassName('anh')[0].src = 'anh/thuacan.jpg';  
+                document.getElementsByTagName('body')[0].style = 'background-color:#fff9e2'; 
+                document.getElementsByTagName('div')[0].style = 'background-color:#fff5ba'; 
+                document.getElementsByTagName('h1')[0].style = 'color:#d7a61e';  
             }
             else if(bmi>29.9 && bmi<=39.9){
-                document.getElementsByClassName('anh')[0].src = 'anh/beophi12.jpg';   
+                document.getElementsByClassName('anh')[0].src = 'anh/beophi12.jpg';
+                document.getElementsByTagName('body')[0].style = 'background-color:#f2b885';
+                document.getElementsByTagName('div')[0].style = 'background-color:#f2b872'; 
+                document.getElementsByTagName('h1')[0].style = 'color:#f28a2e';
             }
             else{
                 document.getElementsByClassName('anh')[0].src = 'anh/beophinang.jpg';
+                document.getElementsByTagName('body')[0].style = 'background-color:#ffcac7'; 
+                document.getElementsByTagName('div')[0].style = 'background-color:#ff9994'; 
+                document.getElementsByTagName('h1')[0].style = 'color:#d92b04';
             }
         }
     </script>
