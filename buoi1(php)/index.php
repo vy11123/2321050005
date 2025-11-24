@@ -108,16 +108,70 @@
         echo count($mang) . "<br>";
         echo $mang[1]  . "<br>";
         print_r($mang);
+        echo "<br>";
         //Thay đổi
         $mang[0] = "Hue";
         print_r($mang);
+        echo "<br>";
         //Thêm vào cuối
         $mang[] = "Vy";
         print_r($mang);
+        echo "<br>";
         //Xóa 
         unset($mang[3]);
         print_r($mang);
+        echo "<br>";
 
+        # Sắp xếp mạng
+        $mang = ["C", "B", "D", "A"];
+        print_r($mang);
+        echo "<br>";
+        #SX tăng
+        sort($mang);
+        print_r($mang);
+        #sx giảm
+        echo "<br>";
+        rsort($mang);
+        print_r($mang);
+        echo "<br>";
+
+        //11. Kiểm tra xem biến có tồn tại hay không
+        $bienA = "hello";
+        isset($bienA); //true
+        isset($bienB); //flase
+        #thử
+        if(isset($bienB)){
+            echo "Biến này có tồn tại";
+        }
+        else{
+            echo "Biến này không tồn tại";
+        }
+        echo "<br>";
+
+        //check empty
+        $check = "a";
+        if(empty($check)){
+            echo "empty";
+        }
+        else{
+            echo "no empty";
+        }
+        echo "<br>";
+
+
+        //12.Hàm
+        #Hàm không có tham số
+        function xinChao(){
+            return "Hello";
+        }
+        echo xinChao();
+        echo "<br>";
+        #Hàm có tham số
+        function xinChao2($ten){
+            return "Hello " . $ten;
+        }
+        echo xinChao2("KVy");
+        echo "<br>";
     ?>
 </body>
 </html>
