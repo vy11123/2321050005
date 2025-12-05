@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
+    <title>Trang chu</title>
+    <style>
+        body{
+            margin-top: 30px;
+            text-align:center;
+        }
+    </style>
 </head>
 <body>
-    <?php
-        session_start();
-        if(!isset($_SESSION["username"])){
-            header('location: login.php');
-        }
-    ?>
-    
     <h1>Trang chủ</h1>
-    <?php
-        echo "Xin chào " . $_SESSION["username"];
-    ?>
 </body>
 </html>
